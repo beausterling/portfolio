@@ -44,7 +44,7 @@ function contact(event) {
 
   if (!isEmailSetUp()) {
     alert(
-      "Sorry, my contact form isn't connected yet. Please reach out to me on GitHub (github.com/beausterling) instead."
+      "Sorry, my contact form isn't connected yet. Please reach out to me on LinkedIn (linkedin.com/in/beau-sterling) instead."
     );
     return;
   }
@@ -59,7 +59,7 @@ function contact(event) {
     .catch(() => {
       loading.classList.remove("modal__overlay--visible");
       alert(
-        "The email service is temporarily unavailable. Please reach out to me on GitHub (github.com/beausterling) instead."
+        "The email service is temporarily unavailable. Please reach out to me on LinkedIn (linkedin.com/in/beau-sterling) instead."
       );
     });
 }
