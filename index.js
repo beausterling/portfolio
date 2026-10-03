@@ -1,0 +1,40 @@
+// EmailJS settings: replace these with the IDs from your EmailJS dashboard
+const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+
+function isEmailSetUp() {
+  return (
+    typeof emailjs !== "undefined" &&
+    !EMAILJS_SERVICE_ID.startsWith("YOUR_") &&
+    !EMAILJS_TEMPLATE_ID.startsWith("YOUR_") &&
+    !EMAILJS_PUBLIC_KEY.startsWith("YOUR_")
+  );
+}
+
+function contact(event) {
+  event.preventDefault();
+  const loading = document.querySelector(".modal__overlay--loading");
+  const success = document.querySelector(".modal__overlay--success");
+
+  if (!isEmailSetUp()) {
+    alert(
+      "Sorry, my contact form isn't connected yet. Please reach out to me on GitHub (github.com/beausterling) instead."
+    );
+    return;
+  }
+
+  loading.classList += " modal__overlay--visible";
+  emailjs
+    .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, event.target, EMAILJS_PUBLIC_KEY)
+    .then(() => {
+      loading.classList.remove("modal__overlay--visible");
+      success.classList += " modal__overlay--visible";
+    })
+    .catch(() => {
+      loading.classList.remove("modal__overlay--visible");
+      alert(
+        "The email service is temporarily unavailable. Please reach out to me on GitHub (github.com/beausterling) instead."
+      );
+    });
+}
