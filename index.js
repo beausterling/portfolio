@@ -1,7 +1,7 @@
-// EmailJS settings: replace these with the IDs from your EmailJS dashboard
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+// EmailJS settings (the public key is meant to be used in the browser)
+const EMAILJS_SERVICE_ID = "portfolio_gmail";
+const EMAILJS_TEMPLATE_ID = "portfolio_contact";
+const EMAILJS_PUBLIC_KEY = "p41sjmAxdwdhp2euh";
 
 let isModalOpen = false;
 let contrastToggle = false;
