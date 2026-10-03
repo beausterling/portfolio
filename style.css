@@ -69,6 +69,33 @@ section {
   color: #f06449 !important;
 }
 
+.link__hover-effect {
+  position: relative;
+}
+
+.link__hover-effect:after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  height: 3px;
+  width: 0;
+  right: 0;
+  transition: all 300ms ease;
+}
+
+.link__hover-effect--white:after {
+  background-color: #fff;
+}
+
+.link__hover-effect--black:after {
+  background-color: #242424;
+}
+
+.link__hover-effect:hover:after {
+  left: 0;
+  width: 100%;
+}
+
 /* 
 
   LANDING PAGE
@@ -225,6 +252,7 @@ nav {
 
 .project__img {
   width: 100%;
+  transition: all 600ms ease;
 }
 
 .project__wrapper {
