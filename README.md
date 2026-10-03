@@ -24,4 +24,4 @@ Live site: https://beausterling.github.io/portfolio/
 
 ## Contact form setup
 
-The form needs an EmailJS account. Put your service ID, template ID and public key at the top of `index.js`. Until then the form just shows a message asking people to reach out on GitHub.
+The contact form sends messages to my inbox through EmailJS. The service ID, template ID and public key are at the top of `index.js` (the public key is safe to use in the browser).
