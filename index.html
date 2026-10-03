@@ -110,8 +110,33 @@
         </div>
       </div>
       <div class="modal__half modal__contact">
-        Let's have a chat!
+        <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+        <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities.</h4>
+        <form id="contact__form">
+          <div class="form__item">
+            <label for="user_name" class="form__item--label">Name</label>
+            <input id="user_name" class="input" name="user_name" type="text" required>
+          </div>
+          <div class="form__item">
+            <label for="user_email" class="form__item--label">Email</label>
+            <input id="user_email" class="input" name="user_email" type="email" required>
+          </div>
+          <div class="form__item">
+            <label for="message" class="form__item--label">Message</label>
+            <textarea id="message" class="input" name="message" required></textarea>
+          </div>
+          <button id="contact__submit" class="form__submit">Send it my way</button>
+        </form>
+        <div class="modal__overlay modal__overlay--loading">
+          <i class="fas fa-spinner"></i>
+        </div>
+        <div class="modal__overlay modal__overlay--success">
+          Thanks for the message! Looking forward to speaking to you soon.
+        </div>
       </div>
+      <button class="modal__exit click" aria-label="Close the contact form">
+        <i class="fas fa-times"></i>
+      </button>
     </div>
   </section>
   <section id="projects">
