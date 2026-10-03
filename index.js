@@ -3,6 +3,8 @@ const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
 const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
 const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
 
+let isModalOpen = false;
+
 function isEmailSetUp() {
   return (
     typeof emailjs !== "undefined" &&
@@ -37,4 +39,13 @@ function contact(event) {
         "The email service is temporarily unavailable. Please reach out to me on GitHub (github.com/beausterling) instead."
       );
     });
+}
+
+function toggleModal() {
+  if (isModalOpen) {
+    isModalOpen = false;
+    return document.body.classList.remove("modal--open");
+  }
+  isModalOpen = true;
+  document.body.classList += " modal--open";
 }

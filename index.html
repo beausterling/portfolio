@@ -18,7 +18,7 @@
         <img id="personal-logo" src="./assets/logo.svg" alt="Beau Sterling logo">
       </figure>
       <ul class="nav__link--list">
-        <li class="nav__link">
+        <li class="nav__link" onclick="toggleModal()">
           <a href="#" class="
             nav__link--anchor
             link__hover-effect
@@ -32,7 +32,7 @@
             link__hover-effect--black
           ">Projects</a>
         </li>
-        <li class="nav__link">
+        <li class="nav__link" onclick="toggleModal()">
           <a href="#" class="
             nav__link--anchor
             link__hover-effect
@@ -56,7 +56,7 @@
           I'm learning <b class="orange">frontend development</b> and I love building websites that are clean,
           responsive and easy to use.
           <br>
-          Here's a bit more <a href="#"><b class="orange click">about me</b></a>.
+          Here's a bit more <a href="#" onclick="toggleModal()"><b class="orange click">about me</b></a>.
         </p>
         <div class="social__list">
           <a href="https://github.com/beausterling" target="_blank" class="social__link click" aria-label="My GitHub">
@@ -65,13 +65,13 @@
           <a href="#projects" class="social__link click" aria-label="See my projects">
             <i class="fas fa-laptop-code"></i>
           </a>
-          <a href="#" class="social__link click" aria-label="Contact me">
+          <a href="#" onclick="toggleModal()" class="social__link click" aria-label="Contact me">
             <i class="fas fa-envelope"></i>
           </a>
         </div>
       </div>
     </header>
-    <button class="mail__btn click" aria-label="Open the contact form">
+    <button class="mail__btn click" onclick="toggleModal()" aria-label="Open the contact form">
       <i class="fas fa-envelope"></i>
     </button>
     <a href="#projects" class="scroll" aria-label="Scroll down to my projects">
@@ -112,6 +112,9 @@
         </div>
       </div>
       <div class="modal__half modal__contact">
+        <button class="modal__exit click" onclick="toggleModal()" aria-label="Close the contact form">
+          <i class="fas fa-times"></i>
+        </button>
         <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
         <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities.</h4>
         <form id="contact__form" onsubmit="contact(event)">
@@ -136,9 +139,6 @@
           Thanks for the message! Looking forward to speaking to you soon.
         </div>
       </div>
-      <button class="modal__exit click" aria-label="Close the contact form">
-        <i class="fas fa-times"></i>
-      </button>
     </div>
   </section>
   <section id="projects">
